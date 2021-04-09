@@ -52,23 +52,16 @@ let passport = [
 }
 ];
 
-document.write(passport[1]);
 
-/* function sortByParam(passportList, paramName){
+
+ function sortByParam(passportList, paramName){
     let sortFunc = function(a, b){
         if (a[paramName] > b[paramName]) {return 1;}
         if (a[paramName] < b[paramName]) {return -1;}
         return 0;}
     return passportList.sort(sortFunc);
 }
-sortByParam(passport, "name"); */
-
-
-
-
-
-
-
+sortByParam(passport, "name"); 
 
 
 /* passport.sort(function(a, b){
@@ -81,14 +74,12 @@ console.log(passport); */
 
 
 
+function displayPassport(arr, i){
+        let out_arr = document.getElementById('out_arr');
+        out_arr.innerHTML = JSON.stringify(arr[i], ' ');
+}
 
-
-// function displayPassport(arr){
-// let out_arr = document.getElementById('out_arr');
-// out_arr.innerHTML = arr;
-// }
-
-// displayPassport(passport);
+displayPassport(passport, 2);
 
 
 
