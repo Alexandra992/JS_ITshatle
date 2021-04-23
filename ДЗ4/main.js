@@ -242,25 +242,3 @@ btnRectangle.addEventListener("click", clickRectangle);
 
 
 
-
-
- /* let blueBtn = document.querySelector(".btn-add");
- blueBtn.innerText = 'Add';
-
- function clickBtn() {
-   let textBox = document.createElement('div');
-   textBox.innerHTML = "Some text";
-   document.body.append(textBox);
- }
-
- blueBtn.addEventListener("click", clickBtn);
-
-
- let redBtn = document.querySelector(".btn-delete");
-
- function clickDelete() {
-   let div = document.querySelector("body div:last-child");
-   div.remove()
- }
-
- redBtn.addEventListener("click", clickDelete); */
