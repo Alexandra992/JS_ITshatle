@@ -12,7 +12,7 @@ let checkInInputs = document.querySelectorAll('.check-in');
 let signInInputs = document.querySelectorAll('.sign-in');
 
 let regExpEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-let user = {};
+//let user = {};
 let users = [];
 
 window.onload = () => {
@@ -68,7 +68,7 @@ checkInInputs.forEach(element => {
 
 })
 
-    //проверяю поля формы на соответствие, вывожу сообщения об ошибках
+//проверяю поля формы на соответствие, вывожу сообщения об ошибках
 function toVerifyInput() {
 
     for (let elem of checkInInputs) {
@@ -100,37 +100,35 @@ function toCleanErr() {
 }
 
 
-//вот тут пытаюсь сделать кнопку снова активной, но не получается((
+//делаем кнопку снова активной
 function toCheckForm() {
-        let email = document.getElementById('check-in-email');
-        let pass = document.getElementById('check-in-pass');
-        let repeatPass = document.getElementById('repeat-pass');
-        if ((email.nextElementSibling.textContent && pass.nextElementSibling.textContent && repeatPass.nextElementSibling.textContent) === "") {
-            btnCheckIn.disabled = false;
-        } else {
-            btnCheckIn.disabled = true;
-        }
-    
+    let email = document.getElementById('check-in-email');
+    let pass = document.getElementById('check-in-pass');
+    let repeatPass = document.getElementById('repeat-pass');
+    if (email.nextElementSibling.textContent === "" && pass.nextElementSibling.textContent === "" && repeatPass.nextElementSibling.textContent === "") {
+        btnCheckIn.disabled = false;
+    } else {
+        btnCheckIn.disabled = true;
+    }
 }
 
 
 
 //запись нового пользователя
-/* checkInInputs.forEach(element => {
-    if (element.name === 'email') {
-        user.email = element.value;
-    } else if (element.name === 'password') {
-        user.pass = element.value;
-    }
+function toRecUser() {
+    event.preventDefault();
+    
+    users.push({
+        email: document.getElementById('check-in-email').value,
+        password: document.getElementById('check-in-pass').value
+    })    
+};
+ 
+
+
+formCheckIn.addEventListener('submit', (event) => {
+    toRecUser();
 });
-console.log(user); */
-
-
-
-
-/* formCheckIn.addEventListener('submit', (event) => {
-    toVerifyInput(formCheckIn)
-}); */
 
 
 
