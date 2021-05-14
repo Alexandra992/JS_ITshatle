@@ -140,9 +140,15 @@ input {
 
 .err  {
     color: red;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
 }
 
-
+#sign-in-submit:disabled, #check-in-submit:disabled {
+    background: #c8beff;
+  color: white;
+  transform: none;
+}
 
 
 
