@@ -115,20 +115,28 @@ function toCheckForm() {
 
 
 //запись нового пользователя
-function toRecUser() {
+const user = {};
+const formHandler = (event) => {
     event.preventDefault();
     
-    users.push({
-        email: document.getElementById('check-in-email').value,
-        password: document.getElementById('check-in-pass').value
-    })    
+
+    for (let {name, value} of checkInInputs){
+        if (name !== 'repeat-password')
+        user[name] = value;
+    }
+       
+    console.log(user);
+   
 };
- 
 
 
-formCheckIn.addEventListener('submit', (event) => {
-    toRecUser();
+
+formCheckIn.addEventListener('submit', formHandler);
+formCheckIn.addEventListener('submit', () =>{
+users.push(user);
+console.log(users);
 });
+
 
 
 
