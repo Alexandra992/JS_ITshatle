@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 18px;
+
+}
+
+body {
+    padding: 20px;
+}
+
+table {
+    padding: 10px;
+    border: 1px solid black;
+    border-spacing: 2px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+div {
+    margin-bottom: 20px;
+}
